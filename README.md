@@ -1,14 +1,21 @@
 # Getting Started with Create React App -practising redux
 
-=> Redux is used sate management
+=> Redux is used as a sate management system.
 
-=> There are 3 things in redux- Store,Action and reducer
+=> There are 3 things in redux- Store,Action and reducer.
+=> we can use reducer in vanilla js,angular and react
+-> here we use use redux with reactjs.
 
 # Store
 
 1. We can store our state in the State
 2. Maintain our application state in a single object which would be manage by the redux store.
 3. Allow your state store in a single object.
+4. for entire application we have only one state.
+5. we can access current state via getState().
+6. allow state to be updated via dispatch(action)
+7. register listener via subscribe method .it accept function as its parameter.
+8. handle unregistering the listerner via the function returned by subscribe(listener).
 
 # Action
 
@@ -46,3 +53,5 @@ function that accept state and action as arguments and returns the next state of
 copy and it remain unchanged.
 
 5. then we use switch case and from this switch case we take relevant action.
+
+6. we can have multiple reducers and for that we need multiple initial state to define, we can do it with one reducer but in the long run when have larger projects it is difficult to manage.
