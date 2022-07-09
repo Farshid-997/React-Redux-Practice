@@ -55,3 +55,7 @@ copy and it remain unchanged.
 5. then we use switch case and from this switch case we take relevant action.
 
 6. we can have multiple reducers and for that we need multiple initial state to define, we can do it with one reducer but in the long run when have larger projects it is difficult to manage.
+
+7. but there is a catch that we have put single reducer in store but if have two reducer how we supposed to put it? so we can solve this by combinedReducer function.
+8. in combined reducer function we have put object as a parameter and we have a key and value. the value is the action creator .
+9. and we call combinedReducer to rootReducer.
