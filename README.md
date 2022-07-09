@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+# Getting Started with Create React App -practising redux
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+=> Redux is used sate management
 
-## Available Scripts
+=> There are 3 things in redux- Store,Action and reducer
 
-In the project directory, you can run:
+# Store
 
-### `npm start`
+1. We can store our state in the State
+2. Maintain our application state in a single object which would be manage by the redux store.
+3. Allow your state store in a single object.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Action
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1.  Our application can't change the state directly,the only way to change state is to emit an action
+    or dispatch an action
 
-### `npm test`
+    For example, In a cake shop we are not allowed to take cake, rather ask the shopkeeper to give that
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    1.It is simple object where we define type property of an action .
 
-### `npm run build`
+    2. the type property is typically defined as string constants.
+    3. it is a plain js object.
+       4.besides 'type' property we can write any property name in action object.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    4. we can define our action object in a function and it will called action creator funtion the name of the function can be anything.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    {
+    type:BUY_CAKE
+    }
+    --> so seeing this type the reducer handle this action an upate the current state.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    --> so action can only interact with the store
+    --> carry some info from your app to the redux store.
 
-### `npm run eject`
+# Reducers
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. specify how the apps state changes in response to actions sent to the store.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+function that accept state and action as arguments and returns the next state of the application
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+(previousState,action)=>newState.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2.In reducer we define initial sate and we pass the intial state as the default value of arguments of a function
+3.then we have action and it comes from action 4. at first we copy all the state because in initial state object we have other object property rather than "type" property so
+copy and it remain unchanged.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+5. then we use switch case and from this switch case we take relevant action.
