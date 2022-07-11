@@ -1,9 +1,10 @@
 import "./App.css";
+import CakeContainer from "./Components/CakeContainer";
 
 function App() {
   return (
     <div className="App">
-      <h2>Redux Practice</h2>
+      <CakeContainer />
     </div>
   );
 }
