@@ -59,3 +59,13 @@ copy and it remain unchanged.
 7. but there is a catch that we have put single reducer in store but if have two reducer how we supposed to put it? so we can solve this by combinedReducer function.
 8. in combined reducer function we have put object as a parameter and we have a key and value. the value is the action creator .
 9. and we call combinedReducer to rootReducer.
+
+# Middleware
+
+1. Provides a third party extension point between dispatching an action and the moments it reaches the reducer.
+
+2. We can add Extra freatures with middleware. basically middleware is used for it.
+
+3. use middleware for logging,crash reporting, performing async task etc.
+
+4. we can use thunk middleware for using async approach like api calls to show data in UI.
