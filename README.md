@@ -69,3 +69,26 @@ copy and it remain unchanged.
 3. use middleware for logging,crash reporting, performing async task etc.
 
 4. we can use thunk middleware for using async approach like api calls to show data in UI.
+
+# MapStateToProps
+
+1. It is basically used to use state from redux to react client side
+2. take state as an argument
+3. return an object and it is a state
+4. use props to pass data to the react client
+
+# MapDispatchToProps
+
+1.It is basically dispatch reducer methods from redux to reac client side 2. take dispatch as an argument 3. return an object and it is a dispatch function 4. use props to pass data to the react client
+
+# Connect
+
+1. This method is connecting redux with react and we pass MapStateToProps and MapDispatchToProps as argument
+
+# useSelector Hooks
+
+1. It is basicaaly simmilar to the MapStateToProps
+2. we dont need to pass props if we use this.
+3. return a value and it is going to be a state.
+
+# useDispatch

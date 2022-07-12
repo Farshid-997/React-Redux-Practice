@@ -16,7 +16,7 @@ const store = createStore(
   rootReducer,
   applyMiddleware(logger, ThunkMiddleware)
 );
-console.log("intial state", store.getState());
+console.log("initial state", store.getState());
 const unsubscribe = store.subscribe(() =>
   console.log("updated state", store.getState())
 );
