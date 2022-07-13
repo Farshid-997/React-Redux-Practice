@@ -79,7 +79,10 @@ copy and it remain unchanged.
 
 # MapDispatchToProps
 
-1.It is basically dispatch reducer methods from redux to reac client side 2. take dispatch as an argument 3. return an object and it is a dispatch function 4. use props to pass data to the react client
+1.It is basically dispatch an action from redux to react client side
+2.take dispatch as an argument.
+3.return an object and it is a dispatch function.
+4.use props to pass data to the react client.
 
 # Connect
 
@@ -88,7 +91,22 @@ copy and it remain unchanged.
 # useSelector Hooks
 
 1. It is basicaaly simmilar to the MapStateToProps
-2. we dont need to pass props if we use this.
-3. return a value and it is going to be a state.
+2. we don't need to pass props if we use this.
+3. return a value and it is going to be a state. but useselector can return any value but MapStateToProps return an object.
+
+4. https://react-redux.js.org/api/hooks#:~:text=React's%20new%20%22hooks%22%20APIs%20give,of%20React's%20built%2Din%20hooks.
 
 # useDispatch
+
+1. useDispatch hooks returns a refrence to the dispatch function from the redux store.
+2. for example, const dispatch= useDispatch().
+3. Now we can pass this any eventListener and pass the action creator in it.
+
+# Async Action
+
+1. When you try to fetch data from api endpoint 3 things will happen, first loading will be false, second an empty where we can store our fetched data,
+   then if any error will come it will show us initialy it will empty string.
+
+2. We can use Redux thunk to fetch api data easily and in action creator we can return a function who has an argument called dispatch
+3. In react UI we can show them by using mapStateToProps and mapDispatchToProps and pass them as an argument of connect function.
+4. Also we can pass the function as a props in our react client side. We can call that action creator function in useEffect.
