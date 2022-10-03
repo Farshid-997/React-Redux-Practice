@@ -1,6 +1,6 @@
 # Getting Started with Create React App -practising redux
 
-=> Redux is used as a sate management system.
+=> Redux is used as a state management system.
 
 => There are 3 things in redux- Store,Action and reducer.
 => we can use reducer in vanilla js,angular and react
